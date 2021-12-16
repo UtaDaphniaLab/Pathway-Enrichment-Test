@@ -1,5 +1,5 @@
 # Pathway Enrichment Test
-Conduct functional analysis using the hypergeometric test to find any enrichment among pathways.
+Conduct functional analysis using the hypergeometric test to find any enrichment among pathways. Run Pathway-Enrichment-Test.R to begin script.
 
 Example inputs and outputs have been provided in the corresponding folders.
 
