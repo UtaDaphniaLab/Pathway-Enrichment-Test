@@ -10,7 +10,7 @@ A tab deliminated file that contains two columns. The first column contains the 
 A one-column file with each gene id seperated by a newline. The gene ids used in this file must correspond with the gene ids provided in the gene pathway file. An example is a list of differentially expressed genes.
 
 ## Output
-Lastly, the script will prompt where the output file should be saved. A tab-delimited table with the following columns will be outputted:
+Lastly, the script will prompt where the output file should be saved. A tab-delimited table sorted by p-value with the following columns will be saved:
 1. pathway - name of the pathway
 2. wht.drawn - number of gene of interest in pathway
 3. wht.in.urn - number of genes in pathway
