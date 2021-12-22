@@ -31,8 +31,8 @@ hypergeometric.table$total.draw = nrow(goi.mapped %>% count(gene))
 p.value = apply(hypergeometric.table, 1, function(x) phyper(as.numeric(x[2])-1, as.numeric(x[3]), as.numeric(x[4]), as.numeric(x[5]),lower.tail= FALSE))
 hypergeometric.table = data.frame(hypergeometric.table, p.value)
 
-hypergeometric.table$p.adjust = round(p.adjust(hypergeometric.table$result, "fdr"),4)
+hypergeometric.table$p.adjust = round(p.adjust(hypergeometric.table$p.value, "fdr"),4)
 
 # sorts by ascending p value
-hypergeometric.table = hypergeometric.table[order(hypergeometric.table$result), ]
+hypergeometric.table = hypergeometric.table[order(hypergeometric.table$p.value), ]
 write.table(hypergeometric.table, file=file.choose(), sep = "\t", col.names=TRUE, row.names = FALSE, quote=FALSE)
